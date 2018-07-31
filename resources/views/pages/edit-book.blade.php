@@ -12,14 +12,14 @@
                 <div class="content">
                   <form id="formBook">
                     <input type="hidden" class="form-control" value="{{$book->id}}">
-                    <div class="row">
+                    <!-- <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
                           <label>Kode Buku</label>
                           <input type="text" name="kode_buku" class="form-control" placeholder="Kode Buku" value="{{$book->kode_buku}}">
                         </div>
                       </div>
-                    </div>
+                    </div> -->
 
                     <div class="row">
                       <div class="col-md-12">

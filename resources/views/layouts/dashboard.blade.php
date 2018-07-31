@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/png" href=""assets/img/favicon.ico"">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
     <title>@yield('title') - Perpustakaan</title>
@@ -32,17 +32,17 @@
     <link href={{asset('assets/css/pe-icon-7-stroke.css')}} rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href={{asset('assets/css/sweetalert.css')}}>
     <link rel="stylesheet" type="text/css" href={{asset('assets/css/select2.min.css')}}>
-    
+
 @yield('styles')
 </head>
 
 <body>
 
     <div class="wrapper">
-        
+
         @include('partials.sidebar')
         <div class="main-panel">
-           
+
         @include('partials.navbar')
 
             <div class="content">
@@ -92,29 +92,33 @@
                 $('#nav-list-transaction').removeClass('active');
                 $('#nav-list-book').removeClass('active');
                 $('#nav-list-member').removeClass('active');
+                $('#nav-list-petugas').removeClass('active');
                 $('#nav-dashboard').addClass('active');
-                break; 
+                break;
             case '/transactions':
             case '/transactions/create':
                 $('#nav-dashboard').removeClass('active');
                 $('#nav-list-book').removeClass('active');
                 $('#nav-list-member').removeClass('active');
                 $('#nav-list-transaction').addClass('active');
-                break; 
+                $('#nav-list-petugas').removeClass('active');
+                break;
             case '/books':
             case '/books/create':
                 $('#nav-dashboard').removeClass('active');
                 $('#nav-list-transaction').removeClass('active');
                 $('#nav-list-member').removeClass('active');
                 $('#nav-list-book').addClass('active');
-                break;  
+                $('#nav-list-petugas').removeClass('active');
+                break;
             case '/members':
             case '/members/create':
                 $('#nav-dashboard').removeClass('active');
                 $('#nav-list-transaction').removeClass('active');
                 $('#nav-list-book').removeClass('active');
-                 $('#nav-list-member').addClass('active');
-                break; 
+                $('#nav-list-member').addClass('active');
+                $('#nav-list-petugas').removeClass('active');
+                break;
             case '/users':
             case '/users/create':
                 $('#nav-dashboard').removeClass('active');
@@ -122,8 +126,18 @@
                 $('#nav-list-book').removeClass('active');
                 $('#nav-list-member').removeClass('active');
                 $('#nav-list-user').addClass('active');
-                break;  
-            default: 
+                $('#nav-list-petugas').removeClass('active');
+                break;
+            case '/petugas':
+            case '/petugas/create':
+                $('#nav-dashboard').removeClass('active');
+                $('#nav-list-transaction').removeClass('active');
+                $('#nav-list-book').removeClass('active');
+                $('#nav-list-member').removeClass('active');
+                $('#nav-list-user').removeClass('active');
+                $('#nav-list-petugas').addClass('active');
+                    break;
+            default:
                 text = "Looking forward to the Weekend";
         }
     });

@@ -46,7 +46,7 @@ class BookRepository extends AbstractRepository implements BookInterface, Crudab
      */
     public function paginate($limit = 10, $page = 1, array $column = ['*'], $field, $search = '')
     {
-         // query to aql
+         // cari
         $books = $this->model
         ->orderBy('created_at', 'desc')
         ->where('judul', 'like', '%' . $search . '%')
@@ -59,11 +59,14 @@ class BookRepository extends AbstractRepository implements BookInterface, Crudab
      * @param array $data
      * @return \Symfony\Component\HttpFoundation\Response
      */
+
+     //create
     public function create(array $data)
     {
         // execute sql insert
+        $kode_buku =\DB::table('books')->whereNull('deleted_at')->count();
         return parent::create([
-            'kode_buku'    => e($data['kode_buku']),
+            'kode_buku'    =>$kode_buku,
             'judul'   => e($data['judul']),
             'pengarang' => e($data['pengarang']),
         ]);
@@ -75,6 +78,8 @@ class BookRepository extends AbstractRepository implements BookInterface, Crudab
      * @param array $data
      * @return \Symfony\Component\HttpFoundation\Response
      */
+
+     //update
     public function update($id, array $data)
     {
         return parent::update($id, [
@@ -88,6 +93,8 @@ class BookRepository extends AbstractRepository implements BookInterface, Crudab
      * @param $id
      * @return \Symfony\Component\HttpFoundation\Response
      */
+
+     //detele
     public function delete($id)
     {
         return parent::delete($id);

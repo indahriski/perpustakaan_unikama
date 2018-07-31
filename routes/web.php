@@ -33,6 +33,10 @@ Route::get('/users','Pages\UserController@index')->name('page.list-user');
 Route::get('/users/create','Pages\UserController@create')->name('page.create-user');
 Route::get('/users/{id}/edit','Pages\UserController@edit')->name('page.edit-user');
 
+Route::get('/petugas','Pages\petugasController@index')->name('page.list-petugas');
+Route::get('/petugas/create','Pages\petugasController@create')->name('page.create-petugas');
+Route::get('/petugas/{id}/edit','Pages\petugasController@edit')->name('page.edit-petugas');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

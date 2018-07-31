@@ -1,9 +1,9 @@
-<div class="sidebar" data-color="red" data-image={{asset('assets/img/sidebar-5.jpg')}}>
+<div class="sidebar" data-color="grey" data-image={{asset('assets/img/cat.jpg')}}>
 
             <div class="sidebar-wrapper">
                 <div class="logo">
                     <a href="http://www.creative-tim.com" class="simple-text">
-                    SMK NEGERI 1 KEPANJEN
+                    Universitas Kanjuruhan Malang
                 </a>
                 </div>
 
@@ -38,8 +38,14 @@
                             <p>Transaksi</p>
                         </a>
                     </li>
-                    
-                    
+                    <li class="" id="nav-list-petugas">
+                        <a href={{route('page.list-petugas')}}>
+                            <i class="pe-7s-user-female"></i>
+                            <p>Petugas</p>
+                        </a>
+                    </li>
+
+
                 </ul>
             </div>
         </div>

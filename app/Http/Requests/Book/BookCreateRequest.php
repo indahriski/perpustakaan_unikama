@@ -28,7 +28,7 @@ class BookCreateRequest extends Request
      * @var array
      */
     protected $attrs = [
-        'kode_buku'    => 'Kode buku',
+        // 'kode_buku'    => 'Kode buku',
         'judul'   => 'Judul',
         'pengarang' => 'Pengarang',
     ];
@@ -41,7 +41,7 @@ class BookCreateRequest extends Request
     public function rules()
     {
         return [
-            'kode_buku'    => 'required|max:225',
+            // 'kode_buku'    => 'required|max:225',
             'judul'   => 'required|max:225',
             'pengarang' => 'required|max:60',
         ];

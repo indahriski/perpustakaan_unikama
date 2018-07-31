@@ -33,5 +33,7 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    <script src="/assets/js/jquery.min.js"></script>
+
 </body>
 </html>

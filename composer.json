@@ -9,7 +9,10 @@
         "laravel/framework": "5.3.*",
         "webpatser/laravel-uuid": "1.*",
         "barryvdh/laravel-debugbar": "^2.2",
-        "rap2hpoutre/laravel-log-viewer": "^0.4.3"
+        "anouar/fpdf": "1.0.2",
+        "rap2hpoutre/laravel-log-viewer": "^0.4.3",
+        "nexmo/laravel": "dev-master as 1.0",
+    "nexmo/client": "dev-master as 1.0"
     
     },
     "require-dev": {
